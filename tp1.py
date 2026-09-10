@@ -2,6 +2,35 @@
 
 import math 
 
+
+def moyennne_ponderee(a, b, c, pa, pb, pc):
+    return (a * pa + b * pb + c * pc) / (pa + pb + pc)
+
+
+def convert_mph_to_ms(mph):
+    return mph * 0.44704&
+
+def convert_mph_to_kmh(mph):
+    return mph * 1.60934
+
+def convert mph_to_noeud(mph):
+    return mph * 0.868976
+
+def affiche_vitesse(mph):
+    ms = convert_mph_to_ms(mph)
+    kmh = convert_mph_to_kmh(mph)
+    noeud = convert_mph_to_noeud(mph)
+    print(f"Vitesse en m/s: {ms}")
+    print(f"Vitesse en km/h: {kmh}")
+    print(f"Vitesse en noeuds: {noeud}")
+
+affiche_vitesse(60)  # Exemple d'utilisation de la fonction
+
+import datetime 
+def reviser_sa_voiture(annee : int, nb_kilometres_actuelles : float, nb_kilometres_derniere_revision : float):
+    if annee > 5 or (nb_kilometres_actuelles - nb_kilometres_derniere_revision) > 20000:
+        return True
+
 def faire_la_vaisselle(sale_vaisselle: bool, lave_vaisselle: bool) -> bool:
     return not lave_vaisselle and sale_vaisselle
 print(faire_la_vaisselle(True, True)) 
