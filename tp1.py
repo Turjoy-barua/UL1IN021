@@ -96,12 +96,24 @@ print(test_nombre(120))
 
 # exercice6
 def airetiangle(a: int, b: int, c: int) -> float:
+<<<<<<< HEAD
+=======
+    """
+    Args:
+        a (int): côté a
+        b (int): côté b
+        c (int): côté c
+
+    Returns:
+        float: aire du triangle 
+    """
+>>>>>>> ccbb82c1ea829a18d701295bf2d6e451811aadf5
     p: float = (a+b+c)/2
     return math.sqrt(p*(p-a)*(p-b)*(p-c))
     
 
 def volumetetraedre(a: float, b: float, c: float, d: float, e: float, f: float) -> float:
-    """_summary_
+    """
 
     Args:
         a (float): cote a
