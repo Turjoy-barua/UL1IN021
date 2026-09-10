@@ -1,27 +1,75 @@
+"""
+Exercice: TP1.ex1
+Nom: BARUA et KEGREISZ
+Date creation: 10/09/2026
+"""
 
 
+
+
+import datetime
 import math 
-
+#--------------------------ex1--------------------------
 def faire_la_vaisselle(sale_vaisselle: bool, lave_vaisselle: bool) -> bool:
+    """
+    Args:
+        sale_vaisselle (bool): si le vasselle est sale
+        lave_vaisselle (bool): si il y a un lave vaisselle
+
+    Returns:
+        bool: si je doit laver les vaisselle
+    """
     return not lave_vaisselle and sale_vaisselle
-print(faire_la_vaisselle(True, True)) 
+#--------------------------ex2--------------------------
+def moyennne_ponderee(a: float, b: float , c: float , pa: float , pb: float , pc: float) -> float:
+    """
 
+    Args:
+        a (float): nombre
+        b (float): nombre
+        c (float): nombre
+        pa (float): poids
+        pb (float): poids
+        pc (float): poids
 
-
-def moyennne_ponderee(a, b, c, pa, pb, pc):
+    Returns:
+        float: retourne la moyenne pondere pour le nombre a,b,c avec leur poids pa, pb et pc
+    """
     return (a * pa + b * pb + c * pc) / (pa + pb + pc)
+#--------------------------ex3--------------------------
+def convert_mph_to_ms(mph: float) -> float:
+    """
+    Args:
+        mph (float): prendre en parametre mile per heure
 
+    Returns:
+        float: retourne le mile per second
+    """
+    return mph * 0.44704
 
-def convert_mph_to_ms(mph):
-    return mph * 0.44704&
+def convert_mph_to_kmh(mph: float) -> float:
+    """_summary_
 
-def convert_mph_to_kmh(mph):
+    Args:
+        mph (float): mile per heure
+
+    Returns:
+        float: kilometre per heure
+    """
     return mph * 1.60934
 
-def convert mph_to_noeud(mph):
+def convert_mph_to_noeud(mph: float) -> float:
+    """
+
+    Args:
+        mph (float): mile per heure
+
+    Returns:
+        float: converts mph to noeud
+    """
     return mph * 0.868976
 
-def affiche_vitesse(mph):
+def affiche_vitesse(mph: float) -> str:
     ms = convert_mph_to_ms(mph)
     kmh = convert_mph_to_kmh(mph)
     noeud = convert_mph_to_noeud(mph)
@@ -31,13 +79,10 @@ def affiche_vitesse(mph):
 
 affiche_vitesse(60)  # Exemple d'utilisation de la fonction
 
-import datetime 
 def reviser_sa_voiture(annee : int, nb_kilometres_actuelles : float, nb_kilometres_derniere_revision : float):
-    if annee > 5 or (nb_kilometres_actuelles - nb_kilometres_derniere_revision) > 20000:
+    current_year = datetime.datetime.now()
+    if int(current_year.strftime("%Y")) - annee > 5 or (nb_kilometres_actuelles - nb_kilometres_derniere_revision) > 20000:
         return True
-
-
-
 # ex4
 
 def test_nombre(number: int) -> bool:
@@ -93,3 +138,6 @@ def volumetetraedreregulier(l: float) -> float:
     """
     return (math.sqrt(2)/12)*(l**3)
 
+
+current_year = datetime.datetime.now()
+print(int(current_year.strftime("%Y")))
