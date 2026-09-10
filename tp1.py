@@ -99,6 +99,7 @@ print(test_nombre(120))
 
 # exercice6
 def airetiangle(a: int, b: int, c: int) -> float:
+    """"""
     p: float = (a+b+c)/2
     return math.sqrt(p*(p-a)*(p-b)*(p-c))
     
