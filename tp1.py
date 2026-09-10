@@ -23,7 +23,6 @@ def faire_la_vaisselle(sale_vaisselle: bool, lave_vaisselle: bool) -> bool:
 #--------------------------ex2--------------------------
 def moyennne_ponderee(a: float, b: float , c: float , pa: float , pb: float , pc: float) -> float:
     """
-
     Args:
         a (float): nombre
         b (float): nombre
@@ -48,8 +47,7 @@ def convert_mph_to_ms(mph: float) -> float:
     return mph * 0.44704
 
 def convert_mph_to_kmh(mph: float) -> float:
-    """_summary_
-
+    """
     Args:
         mph (float): mile per heure
 
@@ -60,7 +58,6 @@ def convert_mph_to_kmh(mph: float) -> float:
 
 def convert_mph_to_noeud(mph: float) -> float:
     """
-
     Args:
         mph (float): mile per heure
 
@@ -99,7 +96,6 @@ print(test_nombre(120))
 
 # exercice6
 def airetiangle(a: int, b: int, c: int) -> float:
-    """"""
     p: float = (a+b+c)/2
     return math.sqrt(p*(p-a)*(p-b)*(p-c))
     
